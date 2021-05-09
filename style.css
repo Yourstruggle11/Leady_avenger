@@ -169,3 +169,13 @@ box-shadow: 0px 20px 100px #555;*/
                 scale(1.5);
     
 }
+
+
+
+/* -------------------------for responsvie----------------------- */
+
+@media (max-width:600px) {
+    .for_ph{
+        display: flex;
+    }
+}
