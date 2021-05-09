@@ -10,6 +10,18 @@
 body{
     overflow: hidden;
 }
+.for_ph{
+        
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        z-index: 10000000000;
+        background: linear-gradient(120deg, #f57d00, #ffffff);
+}
 .background{
     width: 100%;
     height: 252px;
