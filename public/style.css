@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lobster&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    overflow: hidden;
+}
+.background{
+    width: 100%;
+    height: 252px;
+    background: url("../images/nightsky1.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: -100px;
+}
+.moon{
+    width: 100px;
+    height: 100px;
+    background: url("../images/moon.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+.sky{
+    width: 100%;
+    height: 252px;
+    background: url("../images/sky.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+    animation: skyani 20s linear infinite;
+    transform: scale(1.5);
+}
+@keyframes skyani{
+    from{
+        left: 0;
+    }
+    to{
+        left: -350px;
+    }
+}
+.score{
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(120deg, #2a6ebb62, #ff880075);
+    color: #00b2a9;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Itim', cursive;
+}
+.play_area{
+width: 100%;
+height: 470px;
+background: linear-gradient(-160deg, #1b5faa, #90cef1, #e2bc4b);
+position: absolute;
+bottom: 0px;
+overflow:hidden;
+/*transform:
+perspective(900px)
+rotateX(60deg)
+scale(0.9);
+box-shadow: 0px 20px 100px #555;*/
+}
+.roadLines{
+    width: 150px;
+    height: 20px;
+    background: linear-gradient(120deg, #00b2a9, #ffffff);
+    position: absolute;
+    top: 50%;
+    transform: translate(50% 50%);
+    border-radius: 20px;
+
+}
+.villain{
+    width: 90px;
+    height: 100px;
+    background: url("../images/villain.png");
+    background-size:100% 100%;
+    position: absolute;
+    filter: drop-shadow(4px 4px 5px black);
+    border-radius: 20px;
+    z-index: 5;
+    transform:
+                perspective(900px)
+                rotateX(-60deg)
+                scale(1.5);
+    
+}
+#avengerDebolina{
+    width: 90px;
+    height: 100px;
+    background: url("../images/heroine1.png");
+    background-size:100% 100%;
+    position: absolute;
+    left: 30px;
+    filter: drop-shadow(4px 4px 5px black);
+    z-index: 5;
+    transform:
+                perspective(900px)
+                rotateX(-60deg)
+                scale(1.5);
+}
+.bullet{
+    width: 70px;
+    height: 70px;
+    background: url("../images/fire1.png");
+    background-size: 100% 100%;
+    position: relative;
+    top: 20px;
+    animation: fire 1s linear infinite;
+}
+@keyframes fire{
+    from{
+        left: 0;
+    }
+    to{
+        left: 2000%;
+    }
+}
+.start_screen{
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(120deg, #f46f25, #ffffff);
+    top: 1%;
+    left: 35%;
+    transform: translateY(100%);
+    position: absolute;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Lobster', cursive;
+    font-size: 15px;
+    color:#ffffff;
+    z-index: 10000;
+}
+.start_screen > p{
+    margin-bottom: 5px;
+}
+.hide{
+    display: none;
+}
+.ash{
+    width: 90px;
+    height: 100px;
+    background: url("../images/ash.png");
+    background-size:100% 100%;
+    position: absolute;
+    filter: drop-shadow(4px 4px 5px black);
+    border-radius: 20px;
+    z-index: 5;
+    transform:
+                perspective(900px)
+                rotateX(-60deg)
+                scale(1.5);
+    
+}
